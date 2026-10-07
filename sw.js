@@ -1,5 +1,5 @@
 // 앱 화면 파일만 캐시한다. 네트워크 우선이라 새 버전이 올라가면 바로 반영되고, 오프라인일 때만 캐시를 쓴다.
-const CACHE = 'rec-shell-v1';
+const CACHE = 'rec-shell-v2';
 const SHELL = ['./', './index.html', './app.js', './worker.js', './manifest.webmanifest', './icon-180.png', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
